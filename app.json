@@ -1,0 +1,17 @@
+{
+  "pages": [  
+    "pages/index/index",
+    "pages/recongize/recongize",
+  
+    "pages/produce/produce",
+    "pages/success/success"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "余料识别",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

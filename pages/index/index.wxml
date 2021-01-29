@@ -1,0 +1,35 @@
+<view wx:if="{{tipShow}}" class="index">
+  <view class="picture-btn" bind:tap="bindChooseFile">
+    <view class="icon">
+      <image src="../../images/camera.svg" alt="" />
+      <text>添加图片</text>
+    </view>
+    <text class="tip">请确保图片清晰完整的包含了余料部分</text>
+  </view>
+  <view class="title">拍照时请保证文字与背景的纯净</view>
+  <view class="picture">
+    <view>
+      <image src="../../images/A41.png" />
+      <image class="tip" src="../../images/error.svg" />
+    </view>
+    <view>
+      <image src="../../images/A42.png" />
+      <image class="tip" src="../../images/correct.svg" />
+    </view>
+  </view>
+</view>
+<view wx:else class="index">
+  <view class="picture-btn local">
+    <image wx:if="{{demarcateUrl}}" src="{{ baseUrl + demarcateUrl}}" />
+    <image wx:else src="{{tempFilePaths}}" />
+    <image wx:if="{{scanShow}}" class="scan" src="{{imgUrl}}" />
+  </view>
+  <view class="tip-title">{{tipTitle}}</view>
+  <view class="recongize">
+    <image wx:if="{{new_url}}" src="{{baseUrl + new_url}}" />
+  </view>
+</view>
+<view wx:if="{{btnShow}}" class="buttom-btn">
+  <view bind:tap="reRecongize">重新识别</view>
+  <view bind:tap="createDrawing">确认</view>
+</view>

@@ -1,0 +1,23 @@
+<view wx:if="{{loading}}" class="loading">
+    <loading></loading>
+    <view>正在生成图纸，请稍候...</view>
+</view>
+<view wx:else class="produce">
+    <view class="title">
+        <image src="../../images/drawing.svg" />
+        <text>图纸已生成</text>
+    </view>
+    <view class="email">
+        <text>复制到浏览器进行下载</text>
+        <!-- <text class="input" user-select="true">{{baseUrl + url}}</text> -->
+        <input class="{{errorMsgShow?'illegal': ''}}"  name="" id="" value="{{baseUrl + url}}"/>
+        <text wx:if="{{errorMsgShow}}" class="error-msg">邮箱格式不正确</text>
+    </view>
+    <view class="drawing">
+        <image src="{{baseUrl + photo}}" />
+        <text>{{drawingName}}</text>
+    </view>
+    <view class="buttom-btn">
+        <button disabled="{{disabled}}" bind:tap="submit">确认推送</button>
+    </view>
+</view>

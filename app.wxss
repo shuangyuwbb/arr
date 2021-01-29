@@ -1,0 +1,7 @@
+page,view,text{
+  margin: 0;
+  padding: 0;
+}
+:root{
+  --themeColor: #fe5100
+}

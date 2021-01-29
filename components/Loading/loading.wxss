@@ -1,0 +1,29 @@
+.loading {
+  margin:20rpx auto;
+  width:100rpx;
+  height:100rpx;
+  border:10rpx solid #1890FF;
+  border-bottom:#18189030 10rpx solid;
+  border-radius:50%;
+  animation:load 1.1s infinite linear;
+  -webkit-animation:load 1.1s infinite linear;
+  -moz-animation:load 1.1s infinite linear;
+  -o-animation:load 1.1s infinite linear;
+}
+@keyframes load {
+  from {
+  transform:rotate(0deg);
+  -ms-transform:rotate(0deg);
+}
+to {
+  transform:rotate(360deg);
+  -ms-transform:rotate(360deg);
+}
+}@-webkit-keyframes load {
+  from {
+  -webkit-transform:rotate(0deg);
+}
+to {
+  -webkit-transform:rotate(360deg);
+}
+}

@@ -1,0 +1,6 @@
+<view class="success">
+    <image src="../../images/email.svg" />
+    <text>推送成功</text>
+    <text>如果没有收到图纸，请检查邮箱是否标记为垃圾邮件</text>
+</view>
+

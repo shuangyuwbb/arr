@@ -1,0 +1,82 @@
+.loading {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.title {
+  width: 100vw;
+  height: 118px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+  box-sizing: border-box;
+  background-color: #1890ff;
+}
+.title image {
+  width: 66.96px;
+  height: 69.97px;
+}
+.title text {
+  color: #fff;
+}
+.email {
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.email text {
+  color: #666666;
+  font-size: 16px;
+}
+.email input {
+  width: 327px;
+  line-height: 40px;
+  text-align: center;
+  margin-top: 10px;
+  border: 1px solid #dcdfee;
+  border-radius: 4px;
+}
+.email .illegal {
+  border: 1px solid #ff0202;
+}
+.email .error-msg {
+  color: #FF5B5A;
+  margin-top: 10px;
+}
+.drawing {
+  width: 100vw;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 23px;
+}
+.drawing image {
+  width: 120px;
+  height: 157.46px;
+}
+.drawing text {
+  color: #666666;
+  font-size: 14px;
+  margin-top: 8px;
+}
+.buttom-btn {
+  position: fixed;
+  bottom: 5px;
+  left: 0;
+  width: 100vw;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+}
+.buttom-btn > button {
+  width: 90% !important;
+  height: 100%;
+  color: #fff;
+  border-radius: 22px;
+  background: #1890FF;
+}

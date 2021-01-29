@@ -1,0 +1,59 @@
+.index {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.picture-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 315px;
+  height: 260px;
+  color: #333333;
+  background-color: #f8f8f8;
+}
+.picture-btn .icon {
+  display: flex;
+  align-items: center;
+  line-height: 60rpx;
+  font-size: 16px;
+}
+.picture-btn .icon image {
+  width: 24px;
+  height: 18px;
+}
+.picture-btn .tip {
+  font-size: 14px;
+  color: #999999;
+  margin-top: 10px;
+}
+.title {
+  width: 100vw;
+  line-height: 40px;
+  text-align: center;
+  margin-top: 10px;
+  border-top: 1px #e0dede solid;
+}
+.picture {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+}
+.picture > view {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.picture > view image {
+  width: 141px;
+  height: 200px;
+}
+.picture > view .tip {
+  margin-top: 10px;
+  width: 20px;
+  height: 20px;
+}
