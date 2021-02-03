@@ -7,17 +7,16 @@
         <image src="../../images/drawing.svg" />
         <text>图纸已生成</text>
     </view>
-    <view class="email">
+    <!-- <view class="email">
         <text>复制到浏览器进行下载</text>
-        <!-- <text class="input" user-select="true">{{baseUrl + url}}</text> -->
-        <input class="{{errorMsgShow?'illegal': ''}}"  name="" id="" value="{{baseUrl + url}}"/>
-        <text wx:if="{{errorMsgShow}}" class="error-msg">邮箱格式不正确</text>
-    </view>
+       <text class="input" user-select="true">{{baseUrl + url}}</text>
+        <input value="{{baseUrl + url}}"/>
+    </view> -->
     <view class="drawing">
-        <image src="{{baseUrl + photo}}" />
+        <image src="{{baseUrl + photo}}" mode="aspectFit"/>
         <text>{{drawingName}}</text>
     </view>
     <view class="buttom-btn">
-        <button disabled="{{disabled}}" bind:tap="submit">确认推送</button>
+        <button bind:tap="submit">复制下载链接</button>
     </view>
 </view>

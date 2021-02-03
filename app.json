@@ -1,10 +1,8 @@
 {
-  "pages": [  
-    "pages/index/index",
+  "pages": [     
     "pages/recongize/recongize",
-  
-    "pages/produce/produce",
-    "pages/success/success"
+    "pages/index/index",
+    "pages/produce/produce"
   ],
   "window": {
     "backgroundTextStyle": "light",

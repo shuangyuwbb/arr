@@ -88,6 +88,7 @@
   padding: 0 20px;
   box-sizing: border-box;
   box-shadow: 0 2px 4px rgba(51, 49, 49, 0.5);
+  padding-bottom: calc(10px + env(safe-area-inset-bottom)/2);
 }
 .buttom-btn > view {
   display: flex;

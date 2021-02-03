@@ -49,15 +49,15 @@
 }
 .drawing {
   width: 100vw;
-  height: 180px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 23px;
 }
 .drawing image {
-  width: 120px;
-  height: 157.46px;
+  width: 90%;
+  height: 100%;
 }
 .drawing text {
   color: #666666;
@@ -72,6 +72,7 @@
   height: 44px;
   display: flex;
   justify-content: center;
+  padding-bottom: calc(10px + env(safe-area-inset-bottom)/2);
 }
 .buttom-btn > button {
   width: 90% !important;

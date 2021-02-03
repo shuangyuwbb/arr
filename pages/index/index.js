@@ -1,11 +1,8 @@
-import { http } from '../../request/index'
+import { http,baseUrl } from '../../request/index'
 Page({
   data: {
     tempFilePaths: '',
-
-    loading: true,
-    none: 'block',
-    baseUrl: 'http://10.1.40.77:5000',
+    baseUrl: baseUrl,
     new_url: '',
     tipShow: true,
     scanShow: true,
@@ -17,22 +14,17 @@ Page({
     demarcateUrl: ''
   },
 
+  onLoad(event){
+    let {tempFilePaths} = event
+    this.setData({
+      tempFilePaths
+    })
+    this.updateFile()
+  },
+
   createDrawing() {
     wx.navigateTo({
       url: '/pages/produce/produce?name='+this.data.new_name
-    })
-  },
-
-  bindChooseFile() {
-    wx.chooseImage({
-      success: res => {
-        const tempFilePaths = res.tempFilePaths
-        this.setData({
-          tempFilePaths,
-          tipShow: false
-        })
-        this.updateFile()
-      }
     })
   },
 
@@ -42,13 +34,13 @@ Page({
       scanShow: true,
       tipTitle: '正在扫描图片...'
     })
-    this.updateFile()
+    this.loadRecongize()
   },
 
   updateFile() {
     wx.uploadFile({
-      url: this.data.baseUrl + '/upload',
-      filePath: this.data.tempFilePaths[0],
+      url: baseUrl + '/upload',
+      filePath: this.data.tempFilePaths,
       name: 'img',
       formData: {
         filetype: 'image'
@@ -66,7 +58,7 @@ Page({
       fail: err => {
         wx.showToast({
           title: err,
-          icon: 'error'
+          icon: 'none'
         })
       }
     })
@@ -84,7 +76,7 @@ Page({
     http(params).then(res => {
       // 扫描中
       this.setData({
-        demarcateUrl: res.data.data,
+        demarcateUrl: res.data,
         imgUrl: '../../images/scan.gif',
         tipTitle: '正在扫描图片...'
       })
@@ -100,15 +92,12 @@ Page({
       }
     }
     http(params).then(res => {
-      console.log(res)
       this.setData({
-        new_url: res.data.data,
+        new_url: res.data,
         scanShow: false,
         tipTitle: '识别效果图',
         btnShow: true
       })
     })
   }
-
-
 })
